@@ -23,7 +23,7 @@ jobs:
       - run: npx nx affected --target=build --parallel --max-parallel=3
       - run: npx nx affected --target=lint --parallel --max-parallel=3
       - run: npx nx affected --target=test --parallel --max-parallel=2
-      - run: npx nx run-many --target=build --parallel --max-parallel=2
+      - run: npx nx run-many --target=build --all --parallel --max-parallel=2
       - run: npx nx affected --target=e2e --parallel --max-parallel=2
   pr:
     runs-on: ubuntu-latest
@@ -42,5 +42,5 @@ jobs:
       - run: npx nx affected --target=build --parallel --max-parallel=3
       - run: npx nx affected --target=lint --parallel --max-parallel=3
       - run: npx nx affected --target=test --parallel --max-parallel=2
-      - run: npx nx run-many --target=build --parallel --max-parallel=2
+      - run: npx nx run-many --target=build --all --parallel --max-parallel=2
       - run: npx nx affected --target=e2e --parallel --max-parallel=2
