@@ -37,7 +37,7 @@ jobs:
         uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: '16'
+          node-version: '14'
       - run: yarn install
       - run: npx nx affected --target=build --parallel --max-parallel=3
       - run: npx nx affected --target=lint --parallel --max-parallel=3
